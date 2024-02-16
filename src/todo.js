@@ -13,6 +13,8 @@ function createTodo (
     const increasePriority = () => priority++;
     const decreasePriority = () => priority--;
 
+    return { title, description, dueDate, increasePriority, decreasePriority };
+
 }
 
 export { createTodo };
