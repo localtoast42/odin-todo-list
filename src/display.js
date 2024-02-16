@@ -3,7 +3,7 @@ function createProjectItem (project) {
     projectItem.classList.add('project-item');
     projectItem.textContent = project.title;
 
-    return { projectItem };
+    return projectItem;
 }
 
 function createProjectUpdater () {
@@ -25,7 +25,7 @@ function createTodoItem (todo) {
     todoItem.classList.add('todo-item');
     todoItem.textContent = todo.title;
 
-    return {todoItem};
+    return todoItem;
 }
 
 function createTodoUpdater () {
