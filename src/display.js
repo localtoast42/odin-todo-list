@@ -1,7 +1,7 @@
 function createProjectItem (project) {
     const projectItem = document.createElement('li');
     projectItem.classList.add('project-item');
-    projectItem.textContent = project.title;
+    projectItem.textContent = project.getTitle();
 
     return projectItem;
 }
@@ -11,7 +11,7 @@ function createProjectUpdater () {
 
     const updateProjectList = (projects) => {
         projectsList.textContent = '';
-        for (const project in projects) {
+        for (const project of projects) {
             const item = createProjectItem(project);
             projectsList.appendChild(item);
         }
@@ -32,7 +32,7 @@ function createTodoUpdater () {
     const contentDiv = document.querySelector('.content');
 
     const updateTodoList = (todos) => {
-        for (const todo in todos) {
+        for (const todo of todos) {
             const item = createTodoItem(todo);
             contentDiv.appendChild(item);
         }
@@ -51,4 +51,4 @@ function createDisplayUpdater () {
     };
 }
 
-export { createDisplayUpdater };
+export { createProjectItem, createProjectUpdater, createTodoItem, createTodoUpdater };

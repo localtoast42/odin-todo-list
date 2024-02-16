@@ -1,11 +1,15 @@
 import { createTodo } from "./todo";
 import { createProject } from "./project";
-import { createDisplayUpdater } from "./display";
+import { 
+    createProjectItem, 
+    createProjectUpdater, 
+    createTodoItem, 
+    createTodoUpdater } from "./display";
 
-const displayUpdater = createDisplayUpdater();
+const projectUpdater = createProjectUpdater();
 const defaultProject = createProject("default");
 const projects = [];
 
 projects.push(defaultProject);
 
-displayUpdater.projectUpdater.updateProjectList(projects);
+projectUpdater.updateProjectList(projects);
