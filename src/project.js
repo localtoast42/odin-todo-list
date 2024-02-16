@@ -17,7 +17,14 @@ function createProject (title) {
         this.todosCompleted.filter((todo) => todo !== todoToRemove);
     }
 
-    return { title, todosInProgress, todosCompleted, addTodo, completeTodo, removeTodo };
+    return {
+        title, 
+        todosInProgress, 
+        todosCompleted, 
+        addTodo, 
+        completeTodo, 
+        removeTodo,
+    };
 
 }
 
