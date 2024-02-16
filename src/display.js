@@ -7,7 +7,7 @@ function createProjectItem (project) {
 }
 
 function createProjectUpdater () {
-    const projectsList = document.querySelector('projects');
+    const projectsList = document.querySelector('.projects');
 
     const updateProjectList = (projects) => {
         projectsList.textContent = '';
