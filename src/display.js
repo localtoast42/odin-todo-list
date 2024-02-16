@@ -42,6 +42,13 @@ function createTodoUpdater () {
 }
 
 function createDisplayUpdater () {
+    const projectUpdater = createProjectUpdater();
+    const todoUpdater = createTodoUpdater();
 
-    return {};
+    return { 
+        projectUpdater: updateProjectList, 
+        todoUpdater: updateTodoList,
+    };
 }
+
+export { createDisplayUpdater };
