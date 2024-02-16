@@ -2,6 +2,8 @@ function createProject (title) {
     const todosInProgress = [];
     const todosCompleted = [];
 
+    const getTitle = () => title;
+
     const addTodo = (todoToAdd) => {
         this.todosInProgress.push(todoToAdd);
     }
@@ -17,9 +19,9 @@ function createProject (title) {
     }
 
     return {
-        title, 
         todosInProgress, 
         todosCompleted, 
+        getTitle,
         addTodo, 
         completeTodo, 
         removeTodo,
