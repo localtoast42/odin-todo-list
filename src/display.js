@@ -20,6 +20,27 @@ function createProjectUpdater () {
     return { updateProjectList };
 }
 
+function createTodoItem (todo) {
+    const todoItem = document.createElement('div');
+    todoItem.classList.add('todo-item');
+    todoItem.textContent = todo.title;
+
+    return {todoItem};
+}
+
+function createTodoUpdater () {
+    const contentDiv = document.querySelector('.content');
+
+    const updateTodoList = (todos) => {
+        for (todo in todos) {
+            item = createTodoItem(todo);
+            contentDiv.appendChild(item);
+        }
+    }
+
+    return { updateTodoList };
+}
+
 function createDisplayUpdater () {
 
     return {};
