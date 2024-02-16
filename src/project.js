@@ -1,5 +1,4 @@
 function createProject (title) {
-    const title = title;
     const todosInProgress = [];
     const todosCompleted = [];
 
