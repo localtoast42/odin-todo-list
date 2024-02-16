@@ -11,8 +11,8 @@ function createProjectUpdater () {
 
     const updateProjectList = (projects) => {
         projectsList.textContent = '';
-        for (project in projects) {
-            item = createProjectItem(project);
+        for (const project in projects) {
+            const item = createProjectItem(project);
             projectsList.appendChild(item);
         }
     }
@@ -32,8 +32,8 @@ function createTodoUpdater () {
     const contentDiv = document.querySelector('.content');
 
     const updateTodoList = (todos) => {
-        for (todo in todos) {
-            item = createTodoItem(todo);
+        for (const todo in todos) {
+            const item = createTodoItem(todo);
             contentDiv.appendChild(item);
         }
     }
