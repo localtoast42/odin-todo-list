@@ -6,8 +6,12 @@ function createTodo (
 
     const title = title;
     const description = description;
-    const priority = priority;
     const dueDate = dueDate;
+
+    let priority = priority;
+
+    const increasePriority = () => priority++;
+    const decreasePriority = () => priority--;
 
 }
 
