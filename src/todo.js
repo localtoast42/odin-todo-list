@@ -10,10 +10,18 @@ function createTodo (
 
     let priority = priority;
 
+    const getPriority = () => priority;
     const increasePriority = () => priority++;
     const decreasePriority = () => priority--;
 
-    return { title, description, dueDate, increasePriority, decreasePriority };
+    return { 
+        title, 
+        description, 
+        dueDate, 
+        getPriority, 
+        increasePriority, 
+        decreasePriority,
+    };
 
 }
 
